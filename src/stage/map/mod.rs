@@ -6,7 +6,7 @@ pub mod map_constants;
 
 use file_process::*;
 use map_constants::*;
-use crate::character::stuffs::*;
+use super::stuffs::*;
 
 use std::fs;
 use std::io::Error;

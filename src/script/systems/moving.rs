@@ -21,6 +21,32 @@ pub struct Path{
     pub mileage: f32,
 }
 
+impl Default for Motion {
+    fn default() -> Self {
+        Motion {
+            direction: Vec3::new(0.0, 0.0, 0.0),
+            speed: 0.0,
+            max_speed: 0.0,
+            acceleration: 0.0,
+            max_acceleration: 0.0,
+        }
+    }
+}
+
+impl Default for Path {
+    fn default() -> Self {
+        Path {
+            calculated: Vec::new(),
+            traveld: Vec::new(),
+            position_now: Vec3::new(0.0, 0.0, 0.0),
+            position_next: Vec3::new(0.0, 0.0, 0.0),
+            destination: Vec3::new(0.0, 0.0, 0.0),
+            destination_reached: false,
+            mileage: 0.0,
+        }
+    }
+}
+
 
 #[derive(Component)]
 pub struct Mass(f32);
